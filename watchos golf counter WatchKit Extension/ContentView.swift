@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @State private var Plusbtn = "+"
     @State private var Minusbtn = "-"
-    @State private var selectedValue = UIColor.black
+    @State private var watchColor = UIColor.black
     @State private var HoleNo = 1
     @State private var ParNo = 3
     @State private var Score = 1
@@ -20,7 +20,7 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            Color (selectedValue)
+            Color (watchColor)
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
@@ -47,7 +47,7 @@ struct ContentView: View {
             }.frame(width: 90.0, height: 50.0).position(x: 50, y: 10)
             
             VStack {
-                Picker("", selection: $selectedValue) {
+                Picker("", selection: $watchColor) {
                     Text("PAR3").tag(3)
                     Text("PAR4").tag(4)
                     Text("PAR5").tag(5)
@@ -75,11 +75,15 @@ struct ContentView: View {
             
             
             Button(action: {
-                if 1 < Score {
-                    Score = Score - 1
-                
-                    if isPutter && 0 < Putter  {
+                if isPutter {
+                    if 0 < Putter {
+                        Score = Score - 1
                         Putter = Putter - 1
+                    }
+                    
+                } else {
+                    if 1 < Score && Putter < Score {
+                        Score = Score - 1
                     }
                 }
             }) {
@@ -89,22 +93,22 @@ struct ContentView: View {
             
             Button(action: {
                 if isPutter {
-                    selectedValue = UIColor.black
+                    watchColor = UIColor.black
                     isPutter = false
                 } else {
-                    selectedValue = UIColor.init(_colorLiteralRed: 2.0, green: 6.0, blue: 9.0, alpha: 0.1)
+                    watchColor = UIColor.init(_colorLiteralRed: 2.0, green: 6.0, blue: 9.0, alpha: 0.1)
                     isPutter = true
                 }
                 
             }) {
                 Image("putter").renderingMode(.original)
-            }.frame(width: 90.0, height: 50.0).position(x: 50, y: 170)
+            }.frame(width: 80.0, height: 50.0).position(x: 50, y: 170)
             
             Button(action: {
                 print("tmp")
             }) {
                 Text("Save")
-            }.frame(width: 80.0, height: 70.0).position(x: 160, y: 170)
+            }.frame(width: 80.0, height: 50.0).position(x: 150, y: 170)
             
         }
     }
