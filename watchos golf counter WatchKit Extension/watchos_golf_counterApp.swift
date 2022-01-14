@@ -12,7 +12,8 @@ struct watchos_golf_counterApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+//                ContentView()
+                ScoreView()
             }
         }
     }

@@ -15,6 +15,8 @@
 		F662A29B278C8BD90085B9F8 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F662A29A278C8BD90085B9F8 /* ComplicationController.swift */; };
 		F662A29D278C8BDA0085B9F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F662A29C278C8BDA0085B9F8 /* Assets.xcassets */; };
 		F662A2A0278C8BDA0085B9F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F662A29F278C8BDA0085B9F8 /* Preview Assets.xcassets */; };
+		F6E5E3DB278F0B9E007A3571 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E5E3DA278F0B9E007A3571 /* ScoreView.swift */; };
+		F6E5E3DD278F0DE0007A3571 /* ScoresClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E5E3DC278F0DE0007A3571 /* ScoresClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		F662A29C278C8BDA0085B9F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F662A29F278C8BDA0085B9F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F662A2A1278C8BDA0085B9F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6E5E3DA278F0B9E007A3571 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		F6E5E3DC278F0DE0007A3571 /* ScoresClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				F662A296278C8BD90085B9F8 /* ContentView.swift */,
+				F6E5E3DC278F0DE0007A3571 /* ScoresClass.swift */,
+				F6E5E3DA278F0B9E007A3571 /* ScoreView.swift */,
 				F662A298278C8BD90085B9F8 /* watchos_golf_counterApp.swift */,
 				F662A29A278C8BD90085B9F8 /* ComplicationController.swift */,
 				F662A29C278C8BDA0085B9F8 /* Assets.xcassets */,
@@ -259,6 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F662A299278C8BD90085B9F8 /* watchos_golf_counterApp.swift in Sources */,
+				F6E5E3DB278F0B9E007A3571 /* ScoreView.swift in Sources */,
+				F6E5E3DD278F0DE0007A3571 /* ScoresClass.swift in Sources */,
 				F662A297278C8BD90085B9F8 /* ContentView.swift in Sources */,
 				F662A29B278C8BD90085B9F8 /* ComplicationController.swift in Sources */,
 			);
