@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @EnvironmentObject private var Scores :GlobalScores
+    
     @State private var watchColor = UIColor.black
     @State private var HoleNo = 1
     @State private var ParNo = 3
@@ -103,6 +105,10 @@ struct ContentView: View {
 // Save Button
             Button(action: {
                 if HoleNo < 18 {
+                    Scores.Score[HoleNo-1] = Score
+                    Scores.Putter[HoleNo-1] = Putter
+                    Scores.ParNo[HoleNo-1] = ParNo
+                    
                     watchColor = UIColor.black
                     HoleNo = HoleNo + 1
                     ParNo = 3

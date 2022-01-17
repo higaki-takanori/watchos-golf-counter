@@ -10,7 +10,8 @@ import SwiftUI
 @main
 struct watchos_golf_counterApp: App {
     
-    @StateObject var Scores = GlobalScores()
+    var Scores = GlobalScores()
+//    @EnvironmentObject private var Scores :GlobalScores
     @State private var ViewNo = 1
     
     var body: some Scene {
@@ -26,15 +27,14 @@ struct watchos_golf_counterApp: App {
                 default:
                     ContentView()
                 }
-            }.gesture(DragGesture(minimumDistance: 50)
-                .onEnded() { value in
-                if (value.translation.width < 0) {
-                    ViewNo = ViewNo - 1
-                } else if (value.translation.width > 0) {
-                    ViewNo = ViewNo + 1
-                }
-                }
-            )
+            }.environmentObject(Scores)
+                .gesture(DragGesture(minimumDistance: 50).onEnded() { value in
+                    if (value.translation.width < 0) {
+                        ViewNo = ViewNo - 1
+                    } else if (value.translation.width > 0) {
+                        ViewNo = ViewNo + 1
+                    }
+                })
         }
     }
 }

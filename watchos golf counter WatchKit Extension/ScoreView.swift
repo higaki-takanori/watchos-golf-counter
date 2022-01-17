@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ScoreView: View {
     
-    @StateObject var Scores = GlobalScores()
+    @EnvironmentObject private var Scores :GlobalScores
     
     var body: some View {
         List {
