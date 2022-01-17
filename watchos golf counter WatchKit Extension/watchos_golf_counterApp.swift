@@ -12,30 +12,30 @@ struct watchos_golf_counterApp: App {
     
     var globalScores = GlobalScores()
     var countState = CountState()
-    @State private var ViewNo = ViewNoList.countViewNo.rawValue
+    @State var viewNo = ViewNoList.countViewNo.rawValue
     
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                switch ViewNo {
+                switch viewNo {
                 case ViewNoList.scoreViewNo.rawValue:
                     ScoreView()
                 case ViewNoList.countViewNo.rawValue:
-                    CountView()
+                    CountView(viewNo: $viewNo)
                 case ViewNoList.resetViewNo.rawValue:
-                    ResetView()
+                    ResetView(viewNo: $viewNo)
                 default:
-                    CountView()
+                    CountView(viewNo: $viewNo)
                 }
             }
             .environmentObject(globalScores)
             .environmentObject(countState)
             .gesture(DragGesture(minimumDistance: 50)
                         .onEnded() { value in
-                            if (value.translation.width < 0 && ViewNoList.scoreViewNo.rawValue < ViewNo ) {
-                                ViewNo = ViewNo - 1
-                            } else if (value.translation.width > 0 && ViewNo < ViewNoList.resetViewNo.rawValue ) {
-                                ViewNo = ViewNo + 1
+                            if (value.translation.width < 0 && ViewNoList.scoreViewNo.rawValue < viewNo ) {
+                                viewNo = viewNo - 1
+                            } else if (value.translation.width > 0 && viewNo < ViewNoList.resetViewNo.rawValue ) {
+                                viewNo = viewNo + 1
                             }
                         })
         }

@@ -11,13 +11,8 @@ struct CountView: View {
     
     @EnvironmentObject private var globalScores :GlobalScores
     @EnvironmentObject private var countState :CountState   
+    @Binding var viewNo: Int
     
-//    @State private var watchColor = UIColor.black
-//    @State private var HoleNo = 1
-//    @State private var ParNo = 3
-//    @State private var Score = 1
-//    @State private var Putter = 0
-//    @State private var isPutter = false
     let HoleArray = ["1H", "2H", "3H", "4H", "5H", "6H", "7H", "8H", "9H", "10H", "11H", "12H", "13H", "14H", "15H", "16H", "17H", "18H"]
     
     var body: some View {
@@ -109,13 +104,7 @@ struct CountView: View {
                     globalScores.Score[countState.HoleNo-1] = countState.Score
                     globalScores.Putter[countState.HoleNo-1] = countState.Putter
                     globalScores.ParNo[countState.HoleNo-1] = countState.ParNo
-                    
-                    countState.watchColor = UIColor.black
-                    countState.HoleNo = countState.HoleNo + 1
-                    countState.ParNo = 3
-                    countState.Score = 1
-                    countState.Putter = 0
-                    
+                    countState.nextHole()
                 } else {
                     
                 }
@@ -153,8 +142,8 @@ struct MinusbtnStyle: ButtonStyle {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        CountView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CountView()
+//    }
+//}

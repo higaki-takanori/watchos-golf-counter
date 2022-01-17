@@ -125,10 +125,10 @@
 		F662A295278C8BD90085B9F8 /* watchos golf counter WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F662A296278C8BD90085B9F8 /* CountView.swift */,
 				F6E5E3DC278F0DE0007A3571 /* GlobalScoresClass.swift */,
 				F69A37322795B50B00580DC9 /* CountStateClass.swift */,
 				F69A37342795B89E00580DC9 /* ViewNoList.swift */,
+				F662A296278C8BD90085B9F8 /* CountView.swift */,
 				F6E5E3DA278F0B9E007A3571 /* ScoreView.swift */,
 				F6E5E3DE278F241A007A3571 /* ResetView.swift */,
 				F662A298278C8BD90085B9F8 /* watchos_golf_counterApp.swift */,
