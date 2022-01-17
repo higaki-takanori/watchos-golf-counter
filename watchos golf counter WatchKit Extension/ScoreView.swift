@@ -9,16 +9,16 @@ import SwiftUI
 
 struct ScoreView: View {
     
-    @EnvironmentObject private var Scores :GlobalScores
+    @EnvironmentObject private var globalScores :GlobalScores
     
     var body: some View {
         List {
-            Text("Total    \(Scores.Score.reduce(0, +)) ( \(Scores.Putter.reduce(0, +)) )")
+            Text("Total    \(globalScores.Score.reduce(0, +)) ( \(globalScores.Putter.reduce(0, +)) )")
                 .fontWeight(.bold)
                 .foregroundColor(Color(hue: 0.001, saturation: 1.0, brightness: 1.0))
             
             ForEach(0..<18) { (row: Int) in
-                Text("\(row+1)H  PAR\(Scores.ParNo[row])  \(Scores.Score[row]) ( \(Scores.Putter[row]) )")
+                Text("\(row+1)H  PAR\(globalScores.ParNo[row])  \(globalScores.Score[row]) ( \(globalScores.Putter[row]) )")
                 
             }
         }

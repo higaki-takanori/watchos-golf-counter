@@ -10,7 +10,7 @@ import SwiftUI
 struct ResetView: View {
     
     @State private var isReset = false
-    @EnvironmentObject private var Scores :GlobalScores
+    @EnvironmentObject private var globalScores :GlobalScores
 //    @Binding var ViewNo: Int
     
     var body: some View {
@@ -19,10 +19,10 @@ struct ResetView: View {
                 ZStack {
                     
                     Button(action: {
-                        Scores.Score = [Int](repeating:0, count: 18)
-                        Scores.Putter = [Int](repeating:0, count: 18)
-                        Scores.ParNo = [Int](repeating:0, count: 18)
-//                        ViewNo = ViewNo + 1
+                        globalScores.Score = [Int](repeating:0, count: 18)
+                        globalScores.Putter = [Int](repeating:0, count: 18)
+                        globalScores.ParNo = [Int](repeating:0, count: 18)
+//                        ViewNo = ViewNoList.countViewNo.rawValue
                     }) {
                         Text("Reset")
                             .fontWeight(.bold)
