@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GlobalScore: ObservableObject {
+class GlobalScores: ObservableObject {
     @Published var Score = [Int](repeating:0, count: 18)
     @Published var Putter = [Int](repeating:0, count: 18)
     @Published var ParNo = [Int](repeating:0, count: 18)
