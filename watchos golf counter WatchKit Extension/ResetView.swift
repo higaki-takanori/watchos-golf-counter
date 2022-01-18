@@ -10,7 +10,8 @@ import SwiftUI
 struct ResetView: View {
     
     @State private var isReset = false
-    @StateObject var Scores = GlobalScores()
+    @EnvironmentObject private var Scores :GlobalScores
+//    @Binding var ViewNo: Int
     
     var body: some View {
         NavigationView {
@@ -21,7 +22,7 @@ struct ResetView: View {
                         Scores.Score = [Int](repeating:0, count: 18)
                         Scores.Putter = [Int](repeating:0, count: 18)
                         Scores.ParNo = [Int](repeating:0, count: 18)
-                        
+//                        ViewNo = ViewNo + 1
                     }) {
                         Text("Reset")
                             .fontWeight(.bold)
