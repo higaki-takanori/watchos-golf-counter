@@ -100,13 +100,13 @@ struct CountView: View {
             
 // Save Button
             Button(action: {
+                globalScores.Score[countState.HoleNo-1] = countState.Score
+                globalScores.Putter[countState.HoleNo-1] = countState.Putter
+                globalScores.ParNo[countState.HoleNo-1] = countState.ParNo
                 if countState.HoleNo < 18 {
-                    globalScores.Score[countState.HoleNo-1] = countState.Score
-                    globalScores.Putter[countState.HoleNo-1] = countState.Putter
-                    globalScores.ParNo[countState.HoleNo-1] = countState.ParNo
                     countState.nextHole()
                 } else {
-                    
+                    viewNo = ViewNoList.scoreViewNo.rawValue
                 }
             }) {
                 Image("save")

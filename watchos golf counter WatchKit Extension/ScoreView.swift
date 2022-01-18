@@ -18,8 +18,7 @@ struct ScoreView: View {
                 .foregroundColor(Color(hue: 0.001, saturation: 1.0, brightness: 1.0))
             
             ForEach(0..<18) { (row: Int) in
-                Text("\(row+1)H  PAR\(globalScores.ParNo[row])  \(globalScores.Score[row]) ( \(globalScores.Putter[row]) )")
-                
+                Text("\(row+1)H  PAR\(globalScores.ParNo[row])  \(globalScores.Score[row]) ( \(globalScores.Putter[row]) )")                
             }
         }
     }
