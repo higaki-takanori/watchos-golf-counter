@@ -10,12 +10,14 @@
 		F662A287278C8BD60085B9F8 /* watchos golf counter WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F662A286278C8BD60085B9F8 /* watchos golf counter WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F662A28C278C8BD90085B9F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F662A28B278C8BD90085B9F8 /* Assets.xcassets */; };
 		F662A292278C8BD90085B9F8 /* watchos golf counter WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F662A291278C8BD90085B9F8 /* watchos golf counter WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F662A297278C8BD90085B9F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F662A296278C8BD90085B9F8 /* ContentView.swift */; };
+		F662A297278C8BD90085B9F8 /* CountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F662A296278C8BD90085B9F8 /* CountView.swift */; };
 		F662A299278C8BD90085B9F8 /* watchos_golf_counterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F662A298278C8BD90085B9F8 /* watchos_golf_counterApp.swift */; };
 		F662A29B278C8BD90085B9F8 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F662A29A278C8BD90085B9F8 /* ComplicationController.swift */; };
 		F662A29D278C8BDA0085B9F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F662A29C278C8BDA0085B9F8 /* Assets.xcassets */; };
 		F662A2A0278C8BDA0085B9F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F662A29F278C8BDA0085B9F8 /* Preview Assets.xcassets */; };
 		F69A37312794F1CC00580DC9 /* tmp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A37302794F1CC00580DC9 /* tmp.swift */; };
+		F69A37332795B50B00580DC9 /* CountStateClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A37322795B50B00580DC9 /* CountStateClass.swift */; };
+		F69A37352795B89E00580DC9 /* ViewNoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A37342795B89E00580DC9 /* ViewNoList.swift */; };
 		F6E5E3DB278F0B9E007A3571 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E5E3DA278F0B9E007A3571 /* ScoreView.swift */; };
 		F6E5E3DD278F0DE0007A3571 /* GlobalScoresClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E5E3DC278F0DE0007A3571 /* GlobalScoresClass.swift */; };
 		F6E5E3DF278F241A007A3571 /* ResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E5E3DE278F241A007A3571 /* ResetView.swift */; };
@@ -68,13 +70,15 @@
 		F662A286278C8BD60085B9F8 /* watchos golf counter WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "watchos golf counter WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F662A28B278C8BD90085B9F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F662A291278C8BD90085B9F8 /* watchos golf counter WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "watchos golf counter WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F662A296278C8BD90085B9F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F662A296278C8BD90085B9F8 /* CountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountView.swift; sourceTree = "<group>"; };
 		F662A298278C8BD90085B9F8 /* watchos_golf_counterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchos_golf_counterApp.swift; sourceTree = "<group>"; };
 		F662A29A278C8BD90085B9F8 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		F662A29C278C8BDA0085B9F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F662A29F278C8BDA0085B9F8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F662A2A1278C8BDA0085B9F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F69A37302794F1CC00580DC9 /* tmp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tmp.swift; sourceTree = "<group>"; };
+		F69A37322795B50B00580DC9 /* CountStateClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountStateClass.swift; sourceTree = "<group>"; };
+		F69A37342795B89E00580DC9 /* ViewNoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNoList.swift; sourceTree = "<group>"; };
 		F6E5E3DA278F0B9E007A3571 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		F6E5E3DC278F0DE0007A3571 /* GlobalScoresClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalScoresClass.swift; sourceTree = "<group>"; };
 		F6E5E3DE278F241A007A3571 /* ResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetView.swift; sourceTree = "<group>"; };
@@ -121,8 +125,10 @@
 		F662A295278C8BD90085B9F8 /* watchos golf counter WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F662A296278C8BD90085B9F8 /* ContentView.swift */,
+				F662A296278C8BD90085B9F8 /* CountView.swift */,
 				F6E5E3DC278F0DE0007A3571 /* GlobalScoresClass.swift */,
+				F69A37322795B50B00580DC9 /* CountStateClass.swift */,
+				F69A37342795B89E00580DC9 /* ViewNoList.swift */,
 				F6E5E3DA278F0B9E007A3571 /* ScoreView.swift */,
 				F6E5E3DE278F241A007A3571 /* ResetView.swift */,
 				F662A298278C8BD90085B9F8 /* watchos_golf_counterApp.swift */,
@@ -270,12 +276,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69A37352795B89E00580DC9 /* ViewNoList.swift in Sources */,
 				F6E5E3DF278F241A007A3571 /* ResetView.swift in Sources */,
 				F662A299278C8BD90085B9F8 /* watchos_golf_counterApp.swift in Sources */,
+				F69A37332795B50B00580DC9 /* CountStateClass.swift in Sources */,
 				F69A37312794F1CC00580DC9 /* tmp.swift in Sources */,
 				F6E5E3DB278F0B9E007A3571 /* ScoreView.swift in Sources */,
 				F6E5E3DD278F0DE0007A3571 /* GlobalScoresClass.swift in Sources */,
-				F662A297278C8BD90085B9F8 /* ContentView.swift in Sources */,
+				F662A297278C8BD90085B9F8 /* CountView.swift in Sources */,
 				F662A29B278C8BD90085B9F8 /* ComplicationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

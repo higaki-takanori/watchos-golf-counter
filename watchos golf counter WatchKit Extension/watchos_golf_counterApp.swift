@@ -10,31 +10,34 @@ import SwiftUI
 @main
 struct watchos_golf_counterApp: App {
     
-    var Scores = GlobalScores()
-//    @EnvironmentObject private var Scores :GlobalScores
-    @State private var ViewNo = 1
+    var globalScores = GlobalScores()
+    var countState = CountState()
+    @State private var ViewNo = ViewNoList.countViewNo.rawValue
     
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 switch ViewNo {
-                case 0:
+                case ViewNoList.scoreViewNo.rawValue:
                     ScoreView()
-                case 1:
-                    ContentView()
-                case 2:
+                case ViewNoList.countViewNo.rawValue:
+                    CountView()
+                case ViewNoList.resetViewNo.rawValue:
                     ResetView()
                 default:
-                    ContentView()
+                    CountView()
                 }
-            }.environmentObject(Scores)
-                .gesture(DragGesture(minimumDistance: 50).onEnded() { value in
-                    if (value.translation.width < 0) {
-                        ViewNo = ViewNo - 1
-                    } else if (value.translation.width > 0) {
-                        ViewNo = ViewNo + 1
-                    }
-                })
+            }
+            .environmentObject(globalScores)
+            .environmentObject(countState)
+            .gesture(DragGesture(minimumDistance: 50)
+                        .onEnded() { value in
+                            if (value.translation.width < 0 && ViewNoList.scoreViewNo.rawValue < ViewNo ) {
+                                ViewNo = ViewNo - 1
+                            } else if (value.translation.width > 0 && ViewNo < ViewNoList.resetViewNo.rawValue ) {
+                                ViewNo = ViewNo + 1
+                            }
+                        })
         }
     }
 }
