@@ -9,20 +9,20 @@ import SwiftUI
 
 struct ResetView: View {
     
-    @State private var isReset = false
     @EnvironmentObject private var globalScores :GlobalScores
-//    @Binding var ViewNo: Int
+    @EnvironmentObject private var countState :CountState
+    @Binding var viewNo: Int
+
+    @State private var isReset = false
     
     var body: some View {
         NavigationView {
             if isReset {
                 ZStack {
-                    
                     Button(action: {
-                        globalScores.Score = [Int](repeating:0, count: 18)
-                        globalScores.Putter = [Int](repeating:0, count: 18)
-                        globalScores.ParNo = [Int](repeating:0, count: 18)
-//                        ViewNo = ViewNoList.countViewNo.rawValue
+                        globalScores.initGlobalScores()
+                        countState.initCountState()
+                        viewNo = ViewNoList.countViewNo.rawValue
                     }) {
                         Text("Reset")
                             .fontWeight(.bold)
@@ -51,8 +51,9 @@ struct ResetView: View {
     }
 }
 
-struct ResetView_Previews: PreviewProvider {
-    static var previews: some View {
-        ResetView()
-    }
-}
+//struct ResetView_Previews: PreviewProvider {
+//    @Binding var ViewNo: Int
+//    static var previews: some View {
+//        ResetView(ViewNo: $ViewNo)
+//    }
+//}
