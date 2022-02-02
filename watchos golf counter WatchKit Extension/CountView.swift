@@ -10,11 +10,11 @@ import SwiftUI
 struct CountView: View {
     
     @EnvironmentObject private var globalScores :GlobalScores
-    @EnvironmentObject private var countState :CountState   
-    @Binding var viewNo: Int
+    @EnvironmentObject private var countState :CountState
+//    @Binding var viewNo: Int
     
     let HoleArray = ["1H", "2H", "3H", "4H", "5H", "6H", "7H", "8H", "9H", "10H", "11H", "12H", "13H", "14H", "15H", "16H", "17H", "18H"]
-    
+       
     var body: some View {
         ZStack {
             Color (countState.watchColor)
@@ -81,6 +81,7 @@ struct CountView: View {
             
 // Putter Button
             Button(action: {
+                knock(type: WKHapticType(rawValue: 7))
                 if countState.isPutter {
                     countState.watchColor = UIColor.black
                     countState.isPutter = false
@@ -106,7 +107,7 @@ struct CountView: View {
                 if countState.HoleNo < 18 {
                     countState.nextHole()
                 } else {
-                    viewNo = ViewNoList.scoreViewNo.rawValue
+//                    viewNo = ViewNoList.scoreViewNo.rawValue
                 }
             }) {
                 Image("save")
@@ -139,6 +140,11 @@ struct MinusbtnStyle: ButtonStyle {
             .background(Color.red)
             .cornerRadius(12.0)
     }
+}
+
+func knock(type: WKHapticType?) {
+    guard let hType = type else { return }
+    WKInterfaceDevice.current().play(hType)
 }
 
 
