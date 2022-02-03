@@ -10,11 +10,11 @@ import SwiftUI
 struct CountView: View {
     
     @EnvironmentObject private var globalScores :GlobalScores
-    @EnvironmentObject private var countState :CountState   
-    @Binding var viewNo: Int
+    @EnvironmentObject private var countState :CountState
+//    @Binding var viewNo: Int
     
     let HoleArray = ["1H", "2H", "3H", "4H", "5H", "6H", "7H", "8H", "9H", "10H", "11H", "12H", "13H", "14H", "15H", "16H", "17H", "18H"]
-    
+       
     var body: some View {
         ZStack {
             Color (countState.watchColor)
@@ -51,6 +51,7 @@ struct CountView: View {
 
 // Plus Botton
             Button(action: {
+                knock(type: WKHapticType(rawValue: 7))
                 countState.Score = countState.Score + 1
                 if countState.isPutter {
                     countState.Putter = countState.Putter + 1
@@ -64,12 +65,14 @@ struct CountView: View {
             Button(action: {
                 if countState.isPutter {
                     if 0 < countState.Putter {
+                        knock(type: WKHapticType(rawValue: 7))
                         countState.Score = countState.Score - 1
                         countState.Putter = countState.Putter - 1
                     }
                     
                 } else {
                     if 1 < countState.Score && countState.Putter < countState.Score {
+                        knock(type: WKHapticType(rawValue: 7))
                         countState.Score = countState.Score - 1
                     }
                 }
@@ -81,6 +84,7 @@ struct CountView: View {
             
 // Putter Button
             Button(action: {
+                knock(type: WKHapticType(rawValue: 7))
                 if countState.isPutter {
                     countState.watchColor = UIColor.black
                     countState.isPutter = false
@@ -100,13 +104,14 @@ struct CountView: View {
             
 // Save Button
             Button(action: {
+                knock(type: WKHapticType(rawValue: 7))
+                globalScores.Score[countState.HoleNo-1] = countState.Score
+                globalScores.Putter[countState.HoleNo-1] = countState.Putter
+                globalScores.ParNo[countState.HoleNo-1] = countState.ParNo
                 if countState.HoleNo < 18 {
-                    globalScores.Score[countState.HoleNo-1] = countState.Score
-                    globalScores.Putter[countState.HoleNo-1] = countState.Putter
-                    globalScores.ParNo[countState.HoleNo-1] = countState.ParNo
                     countState.nextHole()
                 } else {
-                    
+//                    viewNo = ViewNoList.scoreViewNo.rawValue
                 }
             }) {
                 Image("save")
@@ -139,6 +144,11 @@ struct MinusbtnStyle: ButtonStyle {
             .background(Color.red)
             .cornerRadius(12.0)
     }
+}
+
+func knock(type: WKHapticType?) {
+    guard let hType = type else { return }
+    WKInterfaceDevice.current().play(hType)
 }
 
 

@@ -11,7 +11,7 @@ struct ResetView: View {
     
     @EnvironmentObject private var globalScores :GlobalScores
     @EnvironmentObject private var countState :CountState
-    @Binding var viewNo: Int
+//    @Binding var viewNo: Int
 
     @State private var isReset = false
     
@@ -22,7 +22,7 @@ struct ResetView: View {
                     Button(action: {
                         globalScores.initGlobalScores()
                         countState.initCountState()
-                        viewNo = ViewNoList.countViewNo.rawValue
+//                        viewNo = ViewNoList.countViewNo.rawValue
                     }) {
                         Text("Reset")
                             .fontWeight(.bold)
