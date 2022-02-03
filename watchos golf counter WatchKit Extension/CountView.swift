@@ -51,6 +51,7 @@ struct CountView: View {
 
 // Plus Botton
             Button(action: {
+                knock(type: WKHapticType(rawValue: 7))
                 countState.Score = countState.Score + 1
                 if countState.isPutter {
                     countState.Putter = countState.Putter + 1
@@ -64,12 +65,14 @@ struct CountView: View {
             Button(action: {
                 if countState.isPutter {
                     if 0 < countState.Putter {
+                        knock(type: WKHapticType(rawValue: 7))
                         countState.Score = countState.Score - 1
                         countState.Putter = countState.Putter - 1
                     }
                     
                 } else {
                     if 1 < countState.Score && countState.Putter < countState.Score {
+                        knock(type: WKHapticType(rawValue: 7))
                         countState.Score = countState.Score - 1
                     }
                 }
@@ -101,6 +104,7 @@ struct CountView: View {
             
 // Save Button
             Button(action: {
+                knock(type: WKHapticType(rawValue: 7))
                 globalScores.Score[countState.HoleNo-1] = countState.Score
                 globalScores.Putter[countState.HoleNo-1] = countState.Putter
                 globalScores.ParNo[countState.HoleNo-1] = countState.ParNo
