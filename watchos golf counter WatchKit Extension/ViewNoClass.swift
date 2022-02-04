@@ -7,8 +7,12 @@
 
 import Foundation
 
+final class ViewNo: ObservableObject {
+    @Published var currentNo: Int = ViewNoList.countViewNo.rawValue
+}
+
 enum ViewNoList: Int {
     case scoreViewNo = 0
     case countViewNo = 1
-    case resetViewNo = 2
+    case settingViewNo = 2
 }

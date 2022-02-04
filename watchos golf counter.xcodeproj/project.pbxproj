@@ -17,10 +17,11 @@
 		F662A2A0278C8BDA0085B9F8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F662A29F278C8BDA0085B9F8 /* Preview Assets.xcassets */; };
 		F667FC9E27A8104100254BC4 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F667FC9D27A8104100254BC4 /* SettingView.swift */; };
 		F69A37332795B50B00580DC9 /* CountStateClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A37322795B50B00580DC9 /* CountStateClass.swift */; };
-		F69A37352795B89E00580DC9 /* ViewNoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A37342795B89E00580DC9 /* ViewNoList.swift */; };
+		F69A37352795B89E00580DC9 /* ViewNoClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69A37342795B89E00580DC9 /* ViewNoClass.swift */; };
 		F6E5E3DB278F0B9E007A3571 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E5E3DA278F0B9E007A3571 /* ScoreView.swift */; };
 		F6E5E3DD278F0DE0007A3571 /* GlobalScoresClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E5E3DC278F0DE0007A3571 /* GlobalScoresClass.swift */; };
 		F6E5E3DF278F241A007A3571 /* ResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E5E3DE278F241A007A3571 /* ResetView.swift */; };
+		F6F0233127AD3C2500973C06 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F0233027AD3C2500973C06 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,10 +79,11 @@
 		F662A2A1278C8BDA0085B9F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F667FC9D27A8104100254BC4 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		F69A37322795B50B00580DC9 /* CountStateClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountStateClass.swift; sourceTree = "<group>"; };
-		F69A37342795B89E00580DC9 /* ViewNoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNoList.swift; sourceTree = "<group>"; };
+		F69A37342795B89E00580DC9 /* ViewNoClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewNoClass.swift; sourceTree = "<group>"; };
 		F6E5E3DA278F0B9E007A3571 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		F6E5E3DC278F0DE0007A3571 /* GlobalScoresClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalScoresClass.swift; sourceTree = "<group>"; };
 		F6E5E3DE278F241A007A3571 /* ResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetView.swift; sourceTree = "<group>"; };
+		F6F0233027AD3C2500973C06 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,12 +129,12 @@
 			children = (
 				F6E5E3DC278F0DE0007A3571 /* GlobalScoresClass.swift */,
 				F69A37322795B50B00580DC9 /* CountStateClass.swift */,
-				F69A37342795B89E00580DC9 /* ViewNoList.swift */,
+				F69A37342795B89E00580DC9 /* ViewNoClass.swift */,
 				F662A296278C8BD90085B9F8 /* CountView.swift */,
 				F6E5E3DA278F0B9E007A3571 /* ScoreView.swift */,
-				F6E5E3DE278F241A007A3571 /* ResetView.swift */,
-				F667FC9D27A8104100254BC4 /* SettingView.swift */,
+				F6F0232F27AD360E00973C06 /* Setting */,
 				F662A298278C8BD90085B9F8 /* watchos_golf_counterApp.swift */,
+				F6F0233027AD3C2500973C06 /* ContentView.swift */,
 				F662A29A278C8BD90085B9F8 /* ComplicationController.swift */,
 				F662A29C278C8BDA0085B9F8 /* Assets.xcassets */,
 				F662A2A1278C8BDA0085B9F8 /* Info.plist */,
@@ -147,6 +149,15 @@
 				F662A29F278C8BDA0085B9F8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F6F0232F27AD360E00973C06 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				F667FC9D27A8104100254BC4 /* SettingView.swift */,
+				F6E5E3DE278F241A007A3571 /* ResetView.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,12 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F69A37352795B89E00580DC9 /* ViewNoList.swift in Sources */,
+				F69A37352795B89E00580DC9 /* ViewNoClass.swift in Sources */,
 				F6E5E3DF278F241A007A3571 /* ResetView.swift in Sources */,
 				F662A299278C8BD90085B9F8 /* watchos_golf_counterApp.swift in Sources */,
 				F667FC9E27A8104100254BC4 /* SettingView.swift in Sources */,
 				F69A37332795B50B00580DC9 /* CountStateClass.swift in Sources */,
 				F6E5E3DB278F0B9E007A3571 /* ScoreView.swift in Sources */,
+				F6F0233127AD3C2500973C06 /* ContentView.swift in Sources */,
 				F6E5E3DD278F0DE0007A3571 /* GlobalScoresClass.swift in Sources */,
 				F662A297278C8BD90085B9F8 /* CountView.swift in Sources */,
 				F662A29B278C8BD90085B9F8 /* ComplicationController.swift in Sources */,

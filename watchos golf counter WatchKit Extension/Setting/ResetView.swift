@@ -11,49 +11,49 @@ struct ResetView: View {
     
     @EnvironmentObject private var globalScores :GlobalScores
     @EnvironmentObject private var countState :CountState
-//    @Binding var viewNo: Int
-
+    @EnvironmentObject private var viewNo :ViewNo
+    
     @State private var isReset = false
     
     var body: some View {
-        NavigationView {
-            if isReset {
-                ZStack {
+        if isReset {
+            ZStack {
+                List {
                     Button(action: {
                         globalScores.initGlobalScores()
                         countState.initCountState()
-//                        viewNo = ViewNoList.countViewNo.rawValue
+                        viewNo.currentNo = ViewNoList.countViewNo.rawValue
                     }) {
                         Text("Reset")
                             .fontWeight(.bold)
                             .foregroundColor(Color.red)
-                        
-                    }.position(x: 100, y: 50)
-                    
+                    }
                     Button(action: {
                         isReset = false
                     }) {
                         Text("Cancel")
-                    }.position(x: 100, y: 130)
+                    }
                 }
-            } else {
-                ZStack {
+            }
+        } else {
+            ZStack {
+                List {
                     Button(action: {
                         isReset = true
                     }) {
                         Text("Score Reset")
                             .fontWeight(.bold)
-                            
                     }
                 }
             }
         }
+        
     }
 }
 
 //struct ResetView_Previews: PreviewProvider {
 //    @Binding var ViewNo: Int
 //    static var previews: some View {
-//        ResetView(ViewNo: $ViewNo)
+//        ResetView(ViewNo: 2)
 //    }
 //}
