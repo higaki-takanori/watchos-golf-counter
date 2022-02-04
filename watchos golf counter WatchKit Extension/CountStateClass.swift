@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class CountState: ObservableObject {
+final class CountState: ObservableObject {
     @Published var watchColor = UIColor.black
     @Published var HoleNo = 1
     @Published var ParNo = 4

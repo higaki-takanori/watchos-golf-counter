@@ -7,18 +7,18 @@
 
 import Foundation
 
-class GlobalScores: ObservableObject {
-    
-//    private let holeAll = 18
-//    private let initNum = 0
-       
-    @Published var Score = [Int](repeating: 0, count: 18)
-    @Published var Putter = [Int](repeating: 0, count: 18)
-    @Published var ParNo = [Int](repeating: 0, count: 18)
+    let holeAll = 18
+    let initNum = 0
+
+final class GlobalScores: ObservableObject {
+      
+    @Published var Score = [Int](repeating: initNum, count: holeAll)
+    @Published var Putter = [Int](repeating: initNum, count: holeAll)
+    @Published var ParNo = [Int](repeating: initNum, count: holeAll)
     
     func initGlobalScores() {
-        self.Score = [Int](repeating: 0, count: 18)
-        self.Putter = [Int](repeating: 0, count: 18)
-        self.ParNo = [Int](repeating: 0, count: 18)
+        self.Score = [Int](repeating: initNum, count: holeAll)
+        self.Putter = [Int](repeating: initNum, count: holeAll)
+        self.ParNo = [Int](repeating: initNum, count: holeAll)
     }
 }
